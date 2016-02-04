@@ -36,21 +36,12 @@ public class StringGenerator {
 
     private final Random random;
 
-    /**
-     * Default constructor.
-     */
     public StringGenerator() {
 
         this.random = new Random();
 
     }
 
-    /**
-     * Generates a new random {@link String} with a given length.
-     *
-     * @param length The length of the output {@link String}.
-     * @return The generated {@link String}.
-     */
     public String generate(int length) {
 
         StringBuilder sb = new StringBuilder(length);
