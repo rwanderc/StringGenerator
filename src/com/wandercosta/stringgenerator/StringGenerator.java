@@ -21,7 +21,7 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
-package stringgenerator;
+package com.wandercosta.stringgenerator;
 
 import java.util.Random;
 
@@ -62,19 +62,6 @@ public class StringGenerator {
         }
 
         return sb.toString();
-
-    }
-
-    /**
-     * Main method.
-     *
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-
-        StringGenerator generator = new StringGenerator();
-        String password = generator.generate(8);
-        System.out.println(password);
 
     }
 
