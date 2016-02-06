@@ -29,11 +29,11 @@ import java.util.Random;
  * Simple class to generate random {@link String}s.
  *
  * @author Wander Costa (www.wandercosta.com)
+ * @version 1.0
  */
 public class StringGenerator {
 
     private static final String ABC = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-
     private final Random random;
 
     public StringGenerator() {
