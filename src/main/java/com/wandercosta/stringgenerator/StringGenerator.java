@@ -35,6 +35,7 @@ public class StringGenerator {
 
     private static final String WRONG_ARGUMENT_MSG = "Length must be greater than 0";
     private static final String ABC = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    
     private final Random random;
 
     public StringGenerator() {
