@@ -23,37 +23,23 @@
  */
 package com.wandercosta.stringgenerator;
 
-import java.util.Random;
+import org.apache.commons.lang3.RandomStringUtils;
 
 /**
- * Simple class to generate random {@link String}s.
+ * Main class.
  *
  * @author Wander Costa (www.wandercosta.com)
- * @version 1.0
  */
-public class StringGenerator {
+public class Main {
 
-    private static final String ABC = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    private final Random random;
-
-    public StringGenerator() {
-
-        this.random = new Random();
-
-    }
-
-    public String generate(int length) {
-
-        StringBuilder sb = new StringBuilder(length);
-
-        for (int i = 0; i < length; i++) {
-
-            sb.append(ABC.charAt(random.nextInt(ABC.length())));
-
-        }
-
-        return sb.toString();
-
+    /**
+     * Main method.
+     *
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        System.out.println("Random with implementation: " + new StringGenerator().generate(8));
+        System.out.println("Random with Apache library: " + RandomStringUtils.randomAlphanumeric(8));
     }
 
 }

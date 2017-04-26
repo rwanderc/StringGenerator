@@ -23,24 +23,40 @@
  */
 package com.wandercosta.stringgenerator;
 
+import java.util.Random;
+
 /**
- * Main class.
+ * Simple class to generate random {@link String}s.
  *
  * @author Wander Costa (www.wandercosta.com)
+ * @version 1.0
  */
-public class Main {
+public class StringGenerator {
+
+    private static final String ABC = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    private final Random random;
+
+    public StringGenerator() {
+        this.random = new Random();
+    }
 
     /**
-     * Main method.
+     * Returns a random alphanumeric String.
      *
-     * @param args the command line arguments
+     * @param length the size of the String to be returned.
+     * @return a random alphanumeric String.
      */
-    public static void main(String[] args) {
+    public String generate(int length) {
+        if (length <= 0) {
+            throw new IllegalArgumentException("Lenght must be greater than 0");
+        }
 
-        StringGenerator generator = new StringGenerator();
-        String password = generator.generate(8);
-        System.out.println(password);
-
+        StringBuilder sb = new StringBuilder(length);
+        for (int i = 0; i < length; i++) {
+            int randomValue = random.nextInt(ABC.length());
+            sb.append(ABC.charAt(randomValue));
+        }
+        return sb.toString();
     }
 
 }
