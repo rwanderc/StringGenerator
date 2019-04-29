@@ -53,12 +53,12 @@ public class StringGenerator {
             throw new IllegalArgumentException(WRONG_ARGUMENT_MSG);
         }
 
-        StringBuilder sb = new StringBuilder(length);
+        StringBuilder result = new StringBuilder(length);
         for (int i = 0; i < length; i++) {
             int randomValue = random.nextInt(ABC.length());
-            sb.append(ABC.charAt(randomValue));
+            result.append(ABC.charAt(randomValue));
         }
-        return sb.toString();
+        return result.toString();
     }
 
 }
